@@ -1,0 +1,289 @@
+/* GENEREL START HER */
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: "Jost", sans-serif;
+    font-weight: 400;
+
+}
+
+@font-face {
+    src: url(frostbite-narrow-webfont.woff2);
+    font-family: frost;
+}
+
+html {
+    font-size: 62.5%;
+
+    overflow-y: visible;
+    overflow-x: hidden;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    margin-top: 1.5em;
+}
+
+.link_sitev2 a:link{
+    color: chocolate;
+
+}
+.link_sitev2 a:visited{
+    color: chocolate;
+
+}
+
+
+
+/* MENU START HER  */
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.navbar {
+    width: 100%;
+    height: 4rem;
+    position: absolute;
+    z-index: 300;
+   top: 70%;
+left: 0%;
+
+}
+
+.nav_list {
+    position: absolute;
+    text-align: center;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.li {
+    display: inline-block;
+}
+
+.nav_list li a {
+    text-decoration: none;
+    font-family: frost;
+    font-size: 28px;
+    padding: 0 10px;
+    color: white;
+}
+
+
+.nav_link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: chocolate;
+    transition: width .3s;
+}
+
+.nav_link:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+
+
+
+
+/* MENU SLUT HER  */
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+
+}
+
+/*GENEREL SLUT HER */
+
+
+
+/* SECTION 1 START HER */
+
+.section-1 {
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+}
+
+
+
+
+
+
+/* SECTION 1 SLUT HER */
+
+
+/* SECTION 2 START HER */
+
+.img1 {
+   max-height: 500px;
+    max-width: 500px;
+    border-radius: 1vh;
+    padding-bottom: 0.5vh;
+    padding-top: 0.1vh;
+    height: 100%;
+    width: 100%;
+}
+
+#footer2 {
+    max-width: 350px;
+    max-height: 250px;
+    border-radius: 5px;
+
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+
+.wrapper {
+  max-width: 1650px;
+  margin: 0 20px;
+  display: grid;
+  grid-gap: 40px;
+    position: relative;
+    margin-bottom: 1em;
+
+}
+
+/* SECTION 2 SLUT HER */
+@media screen and (min-width: 500px) {
+
+
+  .sidebar {
+    float: left;
+    width: 19.1489%;
+      border-right-width: 0px;
+border-right-style: solid;
+margin-right: -18px;
+
+margin-bottom: 80px;
+  }
+
+  .content {
+    float: right;
+    width: 79.7872%;
+  }
+
+  .wrapper {
+    margin: 0 auto;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .header, .footer {
+    grid-column: 1 / -1;
+    clear: both;
+  }
+}
+
+.wrapper > * {
+  color: white;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+
+  margin-bottom: 10px;
+}
+
+
+
+@supports (display: grid) {
+  .wrapper > * {
+    width: auto;
+    margin: 0;
+      font-size: 2em;
+  }
+
+    .img1{margin-right: 267px;
+}
+
+
+
+    }
+
+.big_logo{
+          position: relative;
+        text-align: center;
+        max-height: 200px;
+    max-height: 200px;
+    }
+
+@media screen and (max-width: 1200px) {
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+#container2 {
+        display:grid;
+    flex-direction: column;
+        justify-items: center;
+        margin-top: 50px;
+    }
+
+.container3 {
+        display:flex;
+    flex-direction: column;
+        justify-items: center;
+        margin-top: 100px;
+    }
+
+
+.button {
+  background-color: #b9b3b3;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+margin-bottom: 50px;
+}
+
+@media (max-width:500px ){
+
+
+    .small_logo {
+      display: none;
+
+    }
+
+    .big_logo {
+         position: relative;
+        text-align: center;
+        z-index: 5;
+        margin-bottom: 225px;
+    }
+
+
+
+
+}

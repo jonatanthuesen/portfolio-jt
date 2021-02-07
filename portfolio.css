@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: "Jost", sans-serif;
+    font-weight: 400;
+}
+
+html {
+    font-size: 62.5%;
+
+    overflow-y: visible;
+    overflow-x: hidden;
+}
+
+@font-face {
+    src: url(frostbite-narrow-webfont.woff2);
+    font-family: frost;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/******************VIDEO************************/
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+
+}
+
+/****************************NAVBAR/PC**************/
+
+@media (min-width: 501px) {
+
+    .nav_list {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        text-align: center;
+        list-style-type: none;
+    }
+
+    .li {
+        display: inline-block;
+    }
+
+    .nav_list li a {
+        text-decoration: none;
+        font-family: frost;
+        font-size: 28px;
+        padding: 0 10px;
+        color: white;
+    }
+
+
+    .nav_link::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: chocolate;
+        transition: width .3s;
+    }
+
+    .nav_link:hover::after {
+        width: 100%;
+        transition: width .3s;
+    }
+
+    .big_logo {
+        position: relative;
+        text-align: center;
+        top: 7%;
+        left: 46%;
+    }
+
+
+    .small_logo {
+        display: none;
+    }
+
+
+}
+
+/************************PC**********************/
+
+@media (min-width: 501px) {
+    .section-heading {
+        font-size: 5rem;
+        color: #fff;
+        margin-bottom: 5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5rem;
+        border-bottom: 0.3rem solid #c4c4c4;
+        text-shadow: 0.2rem 0.2rem 0.5rem #555;
+    }
+
+    .section-2 {
+        width: 100%;
+        height: 100%;
+        padding: 10rem 0 10rem 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+
+
+    section {
+        padding: 5em 2em;
+    }
+
+
+}
+
+
+
+
+
+
+/***********MOBILE***********/
+/*************************NAVBAR************************/
+@media (max-width: 500px) {
+
+
+
+
+    .container {
+        width: 100%;
+        height: 100vh;
+    }
+
+
+    .burger_menu {
+        width: 35px;
+        height: 30px;
+
+        position: fixed;
+        top: 50px;
+        right: 50px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .line {
+        width: 100%;
+        height: 3px;
+        background-color: chocolate;
+    }
+
+    .navbar {
+        width: 303px;
+        height: 100%;
+        background-color: #262626;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20% 0 0 60%;
+        transition: right .8s cubic-bezier(1, 0, 0, 1);
+    }
+
+    .change {
+        right: 0;
+    }
+
+    .nav_list {
+        text-align: center;
+        font-family: frost;
+
+    }
+
+    .nav_item {
+        list-style: none;
+        margin: 108px;
+
+    }
+
+    .nav_link {
+        text-decoration: none;
+        font-size: 22px;
+        color: white;
+        font-weight: 300;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        position: relative;
+        padding: 9px 0;
+    }
+
+
+    .line {
+        width: 100%;
+        height: 3px;
+        background-color: chocolate;
+        transition: all 0.8s;
+    }
+
+
+    .change .line_1 {
+        transform: rotateZ(-45deg) translate(-8px, 6px);
+    }
+
+    .change .line_2 {
+        opacity: 0;
+    }
+
+    .change .line_3 {
+        transform: rotateZ(45deg)translate(-8px, -6px);
+    }
+
+
+    .small_logo {
+        position: relative;
+        text-align: center;
+        z-index: 5;
+
+    }
+
+    .big_logo {
+        display: none;
+    }
+
+
+
+
+}
